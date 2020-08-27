@@ -7,6 +7,13 @@
 const observer = require('./observer.js');
 
 Page({
+  data: {
+    name: '2j',
+    user: {
+      id: 1
+    },
+    sets: ['a', 'b', 'c']
+  },
   created() {
     new observer.Observer(this, observer.clone(this.data)).init();
 
